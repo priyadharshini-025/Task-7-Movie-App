@@ -100,7 +100,7 @@ function App() {
         if (searchTerm && searchTerm.trim() !== "") {
             handleSearch(searchTerm);
         }
-    }, [filter, handleSearch]);
+    }, [searchTerm, filter, handleSearch]);
 
     //add/remove movie from favorites
     const toggleFavorite = (movie) => {
