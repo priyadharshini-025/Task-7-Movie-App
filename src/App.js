@@ -59,7 +59,6 @@ function App() {
             setCurrentPage(1)
             setSearchTerm(searchTerm)
             let page = 1;
-            let totalResults = 0
             
             while (page < 5) {
                 const data = await searchMovie(searchTerm, filter, page)
@@ -76,7 +75,6 @@ function App() {
                 }
                 
                 setMovies(prevMovies => [...prevMovies, ...data.Search] || [])
-                totalResults = parseInt(data.totalResults) || 0
                 page++;
             }
         }
