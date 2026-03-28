@@ -8,7 +8,7 @@ function Favourite({favorites, onToggleFavorite})
 {
     if (favorites.length === 0) {
         return (
-            <div className="text-center py-32">
+            <div className="text-center">
                 <h1 className="text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">No Favorites Yet</h1>
                 <p className="text-2xl text-gray-400 mb-12">Add movies to your favorites to see them here!</p>
                 <Link to="/" className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-black font-bold py-4 px-10 rounded-lg transition shadow-lg text-lg">
