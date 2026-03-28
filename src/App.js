@@ -172,7 +172,7 @@ function App() {
 
     return (
         <Router>
-            <header className="sticky top-0 bg-gray-900 border-b-2 border-cyan-500 p-4 mb-8 z-50 shadow-2xl">
+            <header className="sticky top-0 bg-gray-900 border-b-2 border-cyan-500 p-4 mb-0 z-50 shadow-2xl">
                 <div className="max-w-7xl mx-auto">
                     {/* Top Row - Logo and Search */}
                     <div className="flex flex-wrap gap-6 justify-between items-center mb-4">
@@ -189,10 +189,10 @@ function App() {
                 </div>
             </header>
 
-            <main className="bg-black min-h-screen py-6">
+            <main className="bg-black min-h-screen">
                 <div className="max-w-7xl mx-auto px-4">
                     {error && (
-                        <div className="bg-red-900 border-l-4 border-red-500 text-red-100 px-6 py-4 rounded mb-8 shadow-lg">
+                        <div className="bg-red-900 border-l-4 border-red-500 text-red-100 px-6 py-2 rounded mb-8 shadow-lg">
                             <p className="font-bold text-lg">⚠️ Error:</p>
                             <p className="mt-1">{error}</p>
                         </div>
@@ -202,7 +202,7 @@ function App() {
                             <>
                                 <MovieList movies={currentMovies} isFavorite={isFavorite} onToggleFavorite={toggleFavorite} />
                                 {movies.length > 0 && (
-                                    <div className="flex gap-4 py-10 justify-center items-center flex-wrap">
+                                    <div className="flex gap-4 py-3 justify-center items-center flex-wrap">
                                         <button
                                             onClick={() => handlePagination(Math.max(1, currentPage - 1))}
                                             disabled={currentPage === 1}

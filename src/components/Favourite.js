@@ -11,16 +11,17 @@ function Favourite({favorites, onToggleFavorite})
             <div className="text-center">
                 <h1 className="text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">No Favorites Yet</h1>
                 <p className="text-2xl text-gray-400 mb-12">Add movies to your favorites to see them here!</p>
-                <Link to="/" className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-black font-bold py-4 px-10 rounded-lg transition shadow-lg text-lg">
-                    🍿 Browse Movies
+                <Link to="/" className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-10 rounded-lg transition shadow-lg text-lg">
+                    <button className="bg-gray-500 rounded-full px-3 py-2 text-cyan-200 text-center">🍿 Browse Movies</button>
                 </Link>
             </div>
         )
     }
 
     return(
-        <div className="py-12">
-            <h1 className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 mb-14 text-center">⭐ Your Favorite Movies</h1>
+        <div>
+            <p className="text-3xl font-bold text-cyan-600 bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 my-7 text-center">⭐ Your Favorite Movies</p>
+
             <div className="text-white grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {favorites.map(movie=>(
                     <div key={movie.imdbID} className="flex flex-col">
@@ -51,6 +52,14 @@ function Favourite({favorites, onToggleFavorite})
                     </div>
                 ))}
             </div>
+        <div className="text-center mt-6">
+        <Link
+            to="/"
+            className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold py-4 px-10 rounded-lg"
+        >
+            <button className="rounded-full px-4 py-2 bg-gray-500 hover:cursor hover:bg-gray-700">Browse back to Movies</button>
+        </Link>
+        </div>
         </div>
     )
 }
