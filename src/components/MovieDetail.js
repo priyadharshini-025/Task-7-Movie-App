@@ -99,12 +99,6 @@ function MovieDetail({ isFavorite, onToggleFavorite }) {
                             >
                                 {isFavorite(movie.imdbID) ? '❌ Remove from Favorites' : '⭐ Add to Favorites'}
                             </button>
-                            <Link
-                                to="/favorites"
-                                className="bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-black font-bold py-3 px-6 rounded-lg transition shadow-lg"
-                            >
-                                View All Favorites
-                            </Link>
                         </div>
                     </div>
                 </div>
